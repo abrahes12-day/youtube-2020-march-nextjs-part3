@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": " node database-test.js && cross-env NODE_OPTIONS='--openssl-legacy-provider' next -p 3005",
     "build": "next build",
     "start": "next start",
     "mock-server": "json-server --watch ./db.json -p 4001 -d 1500"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.2.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "sqlite": "^4.0.25",
+    "sqlite3": "^5.0.2",
     "swr": "^0.1.17"
   },
   "devDependencies": {
